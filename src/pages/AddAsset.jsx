@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./AddAsset.css";
 
 function AddAsset({ onAdd }) {
   const navigate = useNavigate();
@@ -11,13 +12,11 @@ function AddAsset({ onAdd }) {
     buyPrice: "",
   });
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -26,17 +25,17 @@ function AddAsset({ onAdd }) {
       id: Date.now(),
       quantity: parseFloat(formData.quantity),
       buyPrice: parseFloat(formData.buyPrice),
-      currentPrice: parseFloat(formData.buyPrice), // Assume current price = buy price at first
+      currentPrice: parseFloat(formData.buyPrice),
     };
 
-    onAdd(newAsset); // Call add function from props
-    navigate("/"); // Redirect to dashboard
+    onAdd(newAsset);
+    navigate("/");
   };
 
   return (
-    <div>
+    <div className="add-asset-container">
       <h1>Add New Asset</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="add-asset-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -73,3 +72,4 @@ function AddAsset({ onAdd }) {
 }
 
 export default AddAsset;
+ 

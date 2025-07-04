@@ -1,0 +1,46 @@
+/* src/pages/AddAsset.css */
+
+.add-asset-container {
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.add-asset-container h1 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.add-asset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.add-asset-form input,
+.add-asset-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.add-asset-form button {
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-asset-form button:hover {
+    background-color: #2563eb;
+}
