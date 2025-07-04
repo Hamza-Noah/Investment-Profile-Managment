@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./AddAsset.css";
+import "./addAsset.css";
 
 function AddAsset({ onAdd }) {
   const navigate = useNavigate();

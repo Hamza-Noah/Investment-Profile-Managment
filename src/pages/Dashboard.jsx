@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Dashboard.css";
+import "./dashboard.css";
 import AssetPieChart from "../components/AssetPieChart"
 function Dashboard({ assets, onDelete, onUpdate }) {
   const [editingId, setEditingId] = useState(null);
